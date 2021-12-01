@@ -12,6 +12,9 @@ or
 ```
 bash ./AutoSUID.sh
 ```
+An original article:
+--------------------
+[https://www.ivanglinkin.com/autosuid/](https://www.ivanglinkin.com/autosuid/)
 
 Video example:
 --------------
