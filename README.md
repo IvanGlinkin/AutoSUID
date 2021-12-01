@@ -15,7 +15,7 @@ bash ./AutoSUID.sh
 
 Video example:
 --------------
-![](https://www.ivanglinkin.com/wp-content/uploads/2021/12/AutoSUID_PoC.gif)
+![](https://www.ivanglinkin.com/wp-content/uploads/2021/12/AutoSUID_Video.gif)
 
 Screenshots:
 ------------
