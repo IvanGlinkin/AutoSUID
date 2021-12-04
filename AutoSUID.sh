@@ -291,6 +291,8 @@ done;
 if [ -z "$exploitablesuidarray" ]
 then
 	echo -e "$RED_BOLD[ - ]$CLEAR_FONT Unfortunately, there are no any SUID files, which lead to privilege escalation";
+	## Clean residual pwn* files
+	rm pwn*
 	exit
 fi
 
