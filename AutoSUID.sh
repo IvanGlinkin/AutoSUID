@@ -16,9 +16,9 @@
 ############################################################################
 
 # Variables
-version="1.11"
+version="1.173"
 releasedate="November 30, 2021"
-updatedate="December 4, 2021"
+updatedate="May 21, 2022"
 suidlist=(ab agetty ar arj arp as ascii-xfr aspell ash atobm awk base32 base64 basenc bash bridge busybox bzip2 capsh cat chmod chown chroot cmp column comm cp cpio cpulimit csh csplit csvtool cupsfilter curl cut dash date dd dialog diff dig dmsetup docker dosbox ed efax emacs env eqn expand expect file find fish flock fmt fold gawk gcore gdb fgenie genisoimage gimp grep gtester gzip hd head hexdump highlight hping3 iconv install ionice ip jjs join jq jrunscript ksh ksshell ld.so less logsave look lua make mawk more msgattrib msgcat msgconv msgfilter msgmerge msguniq mv nasm nawk nice nl nm nmap node nohup od openssl openvpn paste perf perl pg php pidstat pr ptx python readelf restic rev rlwrap rsync run-parts rview rvim sash sed setarch shuf soelim sort sqlite3 ss ssh-keygen ssh-keyscan sshpass start-stop-daemon stdbuf strace strings sysctl systemctl tac tail taskset tbl tclsh tee tftp tic time timeout troff ul unexpand uniq unshare update-alternatives uudecode uuencode view vigr vim vimdiff vipw watch wc wget whiptail xargs xmodmap xmore xxd xz zsh zsoelim);
 restrictedfile="/etc/shadow"
 suidlistcount=${#suidlist[@]}; # Count the output
