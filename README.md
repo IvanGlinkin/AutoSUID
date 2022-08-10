@@ -22,4 +22,4 @@ Video example:
 
 Screenshots:
 ------------
-![](https://www.ivanglinkin.com/wp-content/uploads/2021/11/AutoSUID.png)
+![](www.ivanglinkin.com/wp-content/uploads/2021/11/AutoSUID.png)
